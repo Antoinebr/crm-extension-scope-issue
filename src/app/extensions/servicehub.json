@@ -1,0 +1,16 @@
+{
+  "type": "crm-card",
+  "data": {
+    "title": "View an order and refund",
+    "uid": "servicehub_extension",
+    "location": "crm.record.tab",
+    "module": {
+      "file": "serviceHub.jsx"
+    },
+    "objectTypes": [
+      {
+        "name": "tickets"
+      }
+    ]
+  }
+}
