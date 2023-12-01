@@ -5,6 +5,10 @@
     "getData": {
       "file": "getData.js",
       "secrets": []
+    },
+    "searchReplacement": {
+      "file": "searchReplacement.js",
+      "secrets": []
     }
   }
 }

@@ -1,7 +1,7 @@
 {
   "type": "crm-card",
   "data": {
-    "title": "View an order and refund",
+    "title": "Replace a device",
     "uid": "servicehub_extension",
     "location": "crm.record.tab",
     "module": {

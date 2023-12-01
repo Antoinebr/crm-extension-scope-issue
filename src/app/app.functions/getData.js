@@ -1,29 +1,18 @@
+const axios = require('axios');
+
 exports.main = async (context = {}, callback) => {
 
-    console.log(context);
+    const order = await axios.get(`https://partner-app.antoinebrossault.com/api/devices/${context.parameters.deviceNumber}`);
 
-    console.log(context.propertiesToSend);
+    
 
+    // console.log(context.parameters.deviceNumber)
 
+    // console.log([deviceInfo[context.parameters.deviceNumber]]);
 
-    return callback([{
-        title: "product one",
-        desc : "Lorem ipsum dolor sit met, qui at desert mandamus, adduce ullum apeirian mea at. Eu mel vide saltando vituperata, sonet quidam deterruisset te qui. Te cum vivendum explicate abhorrent. Id venom argumentum vel. Ut lorem bocent hendrerit eam.",
-        price : 23
-    },{
-        title: "product two",
-        desc : "Lorem ipsum dolor sit met, qui at desert mandamus, adduce ullum apeirian mea at. Eu mel vide saltando vituperata, sonet quidam deterruisset te qui. Te cum vivendum explicate abhorrent. Id venom argumentum vel. Ut lorem bocent hendrerit eam.",
-        price : 30
-    },
-    {
-        title: "product three",
-        desc : "Lorem ipsum dolor sit met, qui at desert mandamus, adduce ullum apeirian mea at. Eu mel vide saltando vituperata, sonet quidam deterruisset te qui. Te cum vivendum explicate abhorrent. Id venom argumentum vel. Ut lorem bocent hendrerit eam.",
-        price : 30
-    },
-    {
-        title: "product four",
-        desc : "Lorem ipsum dolor sit met, qui at desert mandamus, adduce ullum apeirian mea at. Eu mel vide saltando vituperata, sonet quidam deterruisset te qui. Te cum vivendum explicate abhorrent. Id venom argumentum vel. Ut lorem bocent hendrerit eam.",
-        price : 30
-    }])
+    return callback(order.data)
+
+    //return callback([order.data])
 
 };
+
